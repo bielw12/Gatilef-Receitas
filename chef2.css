@@ -1,0 +1,437 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    margin-right: 0px; 
+    position: relative;
+    right: 0%;
+}
+
+.logo {
+    height: 50px;
+    cursor: pointer;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.search-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.search-bar {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 500px;
+    box-sizing: border-box;
+}
+
+.icons-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.icons-container .icon {
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.icons-container .icon:hover {
+    filter: brightness(0) invert(1);
+}
+
+.favorites-icon {
+    height: 30px;
+    cursor: pointer;
+    transition: filter 0.3s;
+    margin-left: 10px;
+    position: relative;
+    left: 30%;
+}
+
+.favorites-icon:hover {
+    filter: brightness(0) invert(1);
+}
+
+main {
+    padding-top: 80px;
+}
+
+.chef-detail {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.chef-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.chef-card h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.chef-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.chef-biography {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.recipes {
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.recipes h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto; 
+    width: 200px; 
+}
+
+.recipe-image {
+    width: 100%;
+    height: 120px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.recipe-info {
+    text-align: center;
+}
+
+.recipe-info h3 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+}
+
+.recipe-info p {
+    font-size: 1em;
+    margin: 0 0 10px;
+}
+
+.carousel-control {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: background-color 0.3s;
+}
+
+.carousel-control:hover {
+    background-color: #333;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    position: relative;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-logo .separator {
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer-logo .separator::before,
+.footer-logo .separator::after {
+    content: "";
+    position: absolute;
+    width: 45%;
+    height: 2px;
+    background-color: #d30213;
+    top: 50%;
+    z-index: 1;
+}
+
+.footer-logo .separator::before {
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.footer-logo .separator::after {
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.footer-logo .separator p {
+    margin: 0;
+    padding: 0 20px;
+    color: #ffffff;
+    background-color: #000;
+    display: inline;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.footer-social a {
+    margin: 10px;
+}
+
+.footer-social img {
+    height: 40px;
+}
+
+.footer-links {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #e60012;
+}
+
+.footer-rights {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.separator {
+    position: relative;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #e60012;
+    top: 50%;
+    z-index: 1;
+}
+
+.separator::before {
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.separator::after {
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.separator h2 {
+    margin: 0;
+    padding: 0 20px;
+    color: #e60012;
+    background-color: #fff;
+    display: inline;
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos gerais para o carrossel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 80%; /* Ajuste a largura do carrossel conforme necessário */
+    max-width: 1200px; /* Largura máxima do carrossel */
+    margin: auto; /* Centraliza o carrossel horizontalmente */
+    padding: 20px 0; /* Espaçamento vertical para os botões de controle */
+}
+
+/* Contêiner para os itens do carrossel */
+.carousel-wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
+/* Itens dentro do carrossel */
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Cada item do carrossel */
+.recipe {
+    flex: 0 0 auto;
+    width: 300px; /* Ajuste a largura do item do carrossel conforme necessário */
+    margin: 0 10px; /* Espaçamento entre os itens */
+    box-sizing: border-box;
+}
+
+/* Estilos para imagens das receitas */
+.recipe-image {
+    width: 100%; /* Imagem ocupa toda a largura do item */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Controles do carrossel */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1; /* Coloca o botão acima dos itens */
+}
+
+/* Posição do botão anterior */
+.prev {
+    left: 10px;
+}
+
+/* Posição do botão próximo */
+.next {
+    right: 10px;
+}
+
+/* Estilos adicionais (opcional) */
+.recipe-info {
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.social-media {
+    margin: 20px 0; /* Espaçamento acima e abaixo */
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os ícones */
+}
+
+.social-media a {
+    display: inline-block;
+}
+
+.social-media img {
+    width: 40px; /* Ajuste o tamanho dos ícones conforme necessário */
+    height: auto;
+    transition: opacity 0.3s;
+}
+
+.social-media img:hover {
+    opacity: 0.7;
+}
